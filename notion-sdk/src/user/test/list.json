@@ -1,0 +1,33 @@
+{
+  "object": "list",
+  "results": [
+    {
+      "object": "user",
+      "id": "69dbb335-a0bf-4008-b7db-011bb29d1b5a",
+      "name": "Kali Team",
+      "avatar_url": "https://s3-us-west-2.amazonaws.com/public.notion-static.com/9fb0f176-fd1d-4c05-8878-5dc807742162/favicon.ico",
+      "type": "person",
+      "person": {
+        "email": "root@kali-team.cn"
+      }
+    },
+    {
+      "object": "user",
+      "id": "39ca01f8-783e-47d2-9fc2-24a7a6a393f1",
+      "name": "Kali-Team-API",
+      "avatar_url": "https://s3-us-west-2.amazonaws.com/public.notion-static.com/aff6677c-4869-4ebe-a44c-d0ba8bd12313/av-64.jpg",
+      "type": "bot",
+      "bot": {
+        "owner": {
+          "type": "workspace",
+          "workspace": true
+        },
+        "workspace_name": "Kali-Team"
+      }
+    }
+  ],
+  "next_cursor": null,
+  "has_more": false,
+  "type": "user",
+  "user": {}
+}
