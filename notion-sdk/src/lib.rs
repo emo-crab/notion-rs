@@ -44,7 +44,7 @@ pub struct NotionApi {
 /// new a notion api client with api token
 impl NotionApi {
     pub fn new<T>(api_token: T) -> Result<Self, Error> where
-        T: Into<String>, {
+        T: Into<String> + std::fmt::Display, {
         let mut headers = reqwest::header::HeaderMap::new();
         headers.insert(
             "Notion-Version",
