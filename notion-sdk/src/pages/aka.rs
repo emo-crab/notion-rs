@@ -2,6 +2,7 @@ use crate::database::properties::PropertyValue;
 use crate::pages::Page;
 
 impl Page {
+    /// get page's title
     pub fn get_title(&self) -> String {
         if let Some(PropertyValue::Title { title, .. }) = self.properties.properties.get("Title") {
             let tit: Vec<String> = title.iter().map(|r| r.plain_text().to_string()).collect();

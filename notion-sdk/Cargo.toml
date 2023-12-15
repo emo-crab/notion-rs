@@ -1,7 +1,13 @@
 [package]
 name = "notion-sdk"
-version = "0.1.0"
 edition = "2021"
+description = "A rust implementation of the nvd-yew."
+homepage = "https://github.com/emo-crab/notion-rs"
+repository = "https://github.com/emo-crab/notion-rs"
+authors = ["Kali-Team <root@kali-team.cn>"]
+readme = "README.md"
+license = "GPL-3.0-only"
+version = "0.0.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

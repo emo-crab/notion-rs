@@ -1,9 +1,12 @@
+//!
+//! # Notion Error
+//!
 use crate::pagination::Object;
 use serde::{Deserialize, Serialize};
 use std::fmt::{Debug, Display, Formatter};
 use std::num::NonZeroU16;
 
-/// An wrapper Error type for all errors produced by the [`NotionApi`](NotionApi) client.
+/// An wrapper Error type for all errors produced by the NotionApi client.
 #[derive(Debug, thiserror::Error)]
 pub enum Error {
     #[error("Invalid UUID: {}", source)]

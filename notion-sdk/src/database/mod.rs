@@ -1,3 +1,17 @@
+//!
+//! # Notion DataBase
+//!
+//! ## Examples
+//! ```rust,no_run
+//! use notion_sdk::common::parent::Parent;
+//! use notion_sdk::database::CreateDatabase;
+//! use notion_sdk::database::properties::Properties;
+//! let database = CreateDatabase{
+//!     parent: Parent::Workspace,
+//!     title: vec![],
+//!     properties: Properties { properties: Default::default()},
+//! };
+//! ```
 pub mod properties;
 
 use crate::common::file::FileOrEmojiObject;

@@ -4,6 +4,7 @@ use crate::{Error, NotionApi, Object};
 const ROUTER: &str = "users";
 
 impl NotionApi {
+    /// list users
     pub async fn users_list(&self) -> Result<Object, Error> {
         let u = format!("{}/{}", self.base_path, ROUTER);
         self.request(self.client.get(u)).await

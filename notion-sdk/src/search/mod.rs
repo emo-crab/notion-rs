@@ -1,3 +1,6 @@
+//!
+//! # Notion Search
+//!
 mod api;
 
 use crate::pages::id::PageId;

@@ -1,3 +1,16 @@
+//!
+//! # Notion Block
+//!
+//! ## Examples
+//! ```rust,no_run
+//! use notion_sdk::block::TextAndChildren;
+//! use notion_sdk::common::rich_text::TextColor;
+//! let text = TextAndChildren{
+//!     rich_text: vec![],
+//!     children: None,
+//!     color: TextColor::Default
+//! };
+//! ```
 mod api;
 mod code;
 pub mod id;

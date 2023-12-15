@@ -1,3 +1,23 @@
+//! [![github]](https://github.com/emo-crab/notion-rs)&ensp;[![crates-io]](https://crates.io/crates/notion-sdk)&ensp;[![docs-rs]](crate)
+//!
+//! [github]: https://img.shields.io/badge/github-8da0cb?style=for-the-badge&labelColor=555555&logo=github
+//! [crates-io]: https://img.shields.io/badge/crates.io-fc8d62?style=for-the-badge&labelColor=555555&logo=rust
+//! [docs-rs]: https://img.shields.io/badge/docs.rs-66c2a5?style=for-the-badge&labelColor=555555&logo=docs.rs
+//!
+//!
+//! UnOfficial Notion SDK mplemented by rust
+//!
+//!
+//! ## Examples
+//! ```rust,no_run
+//! use notion_sdk::NotionApi;
+//! async fn main(){
+//!     let notion = NotionApi::new("token")?;
+//!     let me = notion.users_me().await;
+//!     println!("{:#?}", me);
+//! }
+//!
+//! ```
 pub mod block;
 pub mod comment;
 pub mod common;
@@ -14,14 +34,17 @@ use reqwest::{ClientBuilder, RequestBuilder};
 
 const NOTION_API_VERSION: &str = "2022-02-22";
 
+/// Notion Api Client
 #[derive(Debug, Clone)]
 pub struct NotionApi {
     base_path: String,
     client: reqwest::Client,
 }
 
+/// new a notion api client with api token
 impl NotionApi {
-    pub fn new(api_token: String) -> Result<Self, Error> {
+    pub fn new<T>(api_token: T) -> Result<Self, Error> where
+        T: Into<String>, {
         let mut headers = reqwest::header::HeaderMap::new();
         headers.insert(
             "Notion-Version",
@@ -43,7 +66,7 @@ impl NotionApi {
 }
 
 impl NotionApi {
-    pub async fn request(&self, request: RequestBuilder) -> Result<Object, Error> {
+    async fn request(&self, request: RequestBuilder) -> Result<Object, Error> {
         let request = request.build()?;
         let json = self
             .client

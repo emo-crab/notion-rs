@@ -1,3 +1,6 @@
+//!
+//! # Notion Common
+//!
 pub mod aka;
 pub mod file;
 pub mod parent;

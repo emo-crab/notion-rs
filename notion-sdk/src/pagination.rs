@@ -1,3 +1,6 @@
+//!
+//! # Notion Pagination
+//!
 use crate::block::Block;
 use crate::database::properties::PropertyValue;
 use crate::database::Database;

@@ -1,3 +1,18 @@
+//!
+//! # Notion Page
+//!
+//! ## Examples
+//! ```rust,no_run
+//! use notion_sdk::common::parent::Parent;
+//! use notion_sdk::database::properties::Properties;
+//! use notion_sdk::pages::CreatePage;
+//! let page = CreatePage{
+//!     icon: None,
+//!     parent: Parent::Workspace,
+//!     properties: Properties { properties: Default::default()},
+//!     children: vec![],
+//! };
+//! ```
 mod aka;
 mod api;
 mod builder;

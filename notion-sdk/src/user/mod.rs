@@ -1,3 +1,6 @@
+//!
+//! # Notion User
+//!
 mod api;
 pub mod id;
 mod tests;
