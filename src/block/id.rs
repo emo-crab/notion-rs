@@ -1,7 +1,8 @@
 use crate::Error;
 use std::fmt::Display;
+use serde::{Deserialize, Serialize};
 
-#[derive(serde::Serialize, serde::Deserialize, Debug, Eq, PartialEq, Hash, Clone)]
+#[derive(Serialize, Deserialize, Debug, Eq, PartialEq, Hash, Clone,Default)]
 #[serde(transparent)]
 pub struct BlockId(pub uuid::Uuid);
 
